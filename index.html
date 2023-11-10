@@ -6,29 +6,44 @@
       name="viewport" 
       content="width=device-width, initial-scale=1.0"
     >
-    <link rel = "stylesheet" type = "text/css" href = "http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" >
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel="stylesheet" href="./index.css">
   </head>
   
   <body>
     <header>
-      <div class="rogo">ロゴ</h1>
+      <img class="rogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
       <div class="topPageHeader-container">
         <input type="text" id="search-title-input">
-        <button type="button" id="searchbutton">検索</button>
-        <button type="button" id="shoppingCart-button">Shopping Cart</button>
+        <button
+          type="button"
+          id="searchbutton"
+          src="https://kadai-1-9fce0.web.app/images/ionic-ios-search.svg"
+        >
+          検索
+        </button>
+        <button 
+          type="button" 
+          id="shoppingCart-button" 
+          src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg"
+        >
+          Shopping Cart
+        </button>
       </div>
       <img src="https://kadai-1-9fce0.web.app/images/cotton_beige_sweater.png" >
     </header>
+
     <body>
       <h1>Item List</h1>
       <div class="topPageBody-container">
-        <script src="https://kadai-1-9fce0.web.app/scripts/data.js"></script>
+        <div id="list">
+        </div> 
       </div>
-    </body>
-    <footer>
-      <div class="rogo">ロゴ</div>
+      <img class="rogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
       <div>ロゴ画像作成日？</div>
-    </footer>
+    </body>
+
+    <script src="https://kadai-1-9fce0.web.app/scripts/data.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
