@@ -12,36 +12,42 @@
   
   <body>
     <header>
-      <img class="rogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
       <div class="topPageHeader-container">
-        <input type="text" id="search-title-input">
+        <img class="rogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
+        <input type="text" id="search-title-input" value="Search ...">
         <button
           type="button"
           id="searchbutton"
-          src="https://kadai-1-9fce0.web.app/images/ionic-ios-search.svg"
         >
-          検索
+          <img id="searchMark" src="https://kadai-1-9fce0.web.app/images/ionic-ios-search.svg">
         </button>
+        <span>Shopping Cart</span>
         <button 
           type="button" 
           id="shoppingCart-button" 
-          src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg"
         >
-          Shopping Cart
+          <img src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg">
+
         </button>
       </div>
-      <img src="https://kadai-1-9fce0.web.app/images/cotton_beige_sweater.png" >
+      <img id="imagePicture" src="https://kadai-1-9fce0.web.app/images/olena-sergienko.png" >
     </header>
 
     <body>
-      <h1>Item List</h1>
-      <div class="topPageBody-container">
-        <div id="list">
-        </div> 
-      </div>
-      <img class="rogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
-      <div>ロゴ画像作成日？</div>
+      <h1 class="itemClass">Item List</h1>
+      <!-- <div id="pc">pcサイズ</div>
+      <div id="tablet">tabletサイズ</div>
+      <div id="mobile">mobileサイズ</div> -->
+      <div id="list">
+      </div> 
     </body>
+
+    <footer>
+        <div>
+          <img class="rogo" id="homePageBodyRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
+        </div>
+        <p>Copyright(C) 20XX kids design All Rights Reserved.</p>
+    </footer>
 
     <script src="https://kadai-1-9fce0.web.app/scripts/data.js"></script>
     <script src="./index.js"></script>
