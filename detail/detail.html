@@ -7,21 +7,14 @@
       content="width=device-width, initial-scale=1.0"
     >
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <link rel="stylesheet" href="./common/default-style.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../common/default-style.css">
+    <link rel="stylesheet" href="../index.css">
   </head>
   
   <body>
     <header>
       <div class="topPageHeader-container">
         <img class="rogo" id="headerRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
-        <input type="text" id="search-title-input" value="Search ...">
-        <button
-          type="button"
-          id="searchbutton"
-        >
-          <img id="searchMark" src="https://kadai-1-9fce0.web.app/images/ionic-ios-search.svg">
-        </button>
         <span>Shopping Cart</span>
         <button 
           type="button" 
@@ -31,16 +24,14 @@
           <div id="quantityInCart">1</div>
         </button>
       </div>
-      <img id="imagePicture" src="https://kadai-1-9fce0.web.app/images/olena-sergienko.png" >
     </header>
 
     <body>
-      <h1 class="itemList">Item List</h1>
-      <!-- 検索条件に該当が無ければ下記のコメントを表示 -->
-      <div id="searchResults">検索条件に該当する商品がありません</div>
-      <!-- 検索条件に該当があれば商品リストを表示 -->
-      <div id="list">
-      </div> 
+      <div class="itemDetail">
+        <img src="${item.image}"/>
+        <div>${item.itemName}</div>
+        <span>¥${item.price}</span>    
+      </div>
     </body>
 
     <footer>
@@ -52,6 +43,5 @@
 
     <script src="https://kadai-1-9fce0.web.app/scripts/data.js"></script>
     <script src="./common/default.js"></script>
-    <script src="./index.js"></script>
   </body>
 </html>

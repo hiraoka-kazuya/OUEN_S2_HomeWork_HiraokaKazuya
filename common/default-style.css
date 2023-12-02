@@ -1,0 +1,132 @@
+/* 共通エリア */
+button {
+  background-color: #deb089;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.topPageHeader-container {
+  display: flex;
+  font: Avenir;
+}
+
+/* headerエリア */
+#headerRogo {
+  width: 54px;
+  height: 54px;
+}
+
+
+/* ショッピングカートボタンMobileサイズ(w:390以下) */
+#shoppingCart-button {
+  width: 33px;
+  height: 31px;
+  position: relative;
+  text-align: right;
+}
+
+/* カート内個数表示ベースサイズ（Mobileサイズ w:390以下） */
+#quantityInCart {
+  position: absolute;
+  top: -9px;
+  left: 25px;
+  font-size: 10px;
+  color: white;
+  border: 1px solid;
+  border-color: #333;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #deb089;
+  text-align: center;
+}
+
+/* headerレスポンシブデザイン変更点 ↓ */
+/* tabletサイズ（w:768px以上） */
+@media all and (min-width: 768px) {
+  #headerRogo {
+    width: 100px;
+    height: 100px;
+    margin: 30px 46px 10px 0;
+  }
+  #shoppingCart-button {
+    width: 37px;
+    height: 41px;
+    background-color: crimson;
+  }
+}
+
+/* itemリストpcサイズ（w:1440px以上） */
+@media all and (min-width: 1440px) {
+  #headerRogo {
+    width: 145px;
+    height: 145px;
+    margin: 42px 113px 0px 0;
+  }
+  #shoppingCart-button {
+    width: 37px;
+    height: 41px;
+    background-color: blue;
+  }
+  #quantityInCart {
+    width: 18px;
+    height: 18px;
+  }
+}
+#shoppingCart-button {
+  background-color: white;
+}
+
+header div {
+  border-bottom: 1px solid;
+}
+
+/* bodyエリア ↓ */
+
+/* itemリストベースサイズ（Mobileサイズ、w:390以下） */
+.itemList {
+  font: Avenir;
+  font-size: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+}
+
+/* itemリストtabletサイズ（w:768px以下） */
+@media all and (min-width: 768px) {
+  .itemList {
+    font-size: 20px;
+    margin-bottom: 42px;
+    color: crimson;
+  }
+}
+
+/* itemリストpcサイズ（w:1440px以上） */
+@media all and (min-width: 1440px) {
+  .itemList {
+    font-size: 26px;
+    margin-bottom: 42px;
+    color: aqua;
+  }
+}
+
+/* footerエリア */
+footer {
+  border-top: 1px solid;
+}
+
+footer div {
+  /* センター合わせ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+footer p {
+  /* センター合わせ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
