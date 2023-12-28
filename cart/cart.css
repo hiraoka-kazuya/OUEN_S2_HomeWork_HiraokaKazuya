@@ -1,0 +1,242 @@
+main {
+  padding: 50px 0 126px;
+}
+/* カート内情報（mainの全体コンテナ） */
+.inCart-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+  /* main左側ディスプレイ ↓ */
+  /* アイテム内容コンテナ全体 */
+  .itemContents-container {
+    display: flex;
+    flex-flow: column;
+  }
+    /* カート内情報確認コンテナ */
+    .checkCartInformation-container {
+      width: 417px;
+      height: 212px;
+      margin-bottom: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+      /* 選択内容詳細＆消去buttonコンテナ */
+      .selectionDetails-eraseButton-container {
+        width: 150px;
+        height: 129px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+      }
+      /* 選択内容詳細コンテナ */
+      .selectionDetails-container {
+        width: 150px;
+        height: 98px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+      }
+        /* 商品名＆sizeコンテナ ↓ */
+          /* 商品名タグ */
+          #productName {
+            font-size: 18px;
+          }
+          /* 商品サイズ タグ */
+          #productSize {
+            font-size: 14px;
+          }
+        /* 購入金額エリア全体 */
+        .purchaseAmount-container {
+          border-bottom: 1px solid;
+          display: flex;
+          align-items: last baseline;
+          justify-content: space-between;
+        }
+         /* 商品個数 */
+          #numberOfSelections {
+            font-size: 14px;
+          }
+          /* 商品金額 */
+          #purchaseAmount {
+            font-size: 18px;
+          }
+        /* 消去ボタン コンテナ */
+        .eraseButton-container {
+          display: flex;
+          justify-content: end;
+        }
+          /* 消去ボタン */
+          #eraseButton {
+            color: #deb089;
+            padding-inline: unset;
+            background-color: unset;
+            font-size: 14px;
+          }
+    /* 合計金額全体コンテナ */
+    .totalAmount-container {
+      width: 448px;
+      height: 70px;
+      display: flex;
+      flex-flow: column;
+    }
+      /* 合計金額表示コンテナ */
+      .amountDisplay-container {
+        font-size: 26px;
+        border-bottom: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      /* 購入を続けるコンテナ */
+      .continuePurchasing-container {
+        padding-top: 10px;
+        display: flex;
+        justify-content: end;
+      }
+        /* ショッピングを続けるbutton */
+        #continuePurchasing {
+          font-size: 14px;
+          padding-inline: unset;
+          color: #deb089;
+          background-color: unset;
+        }
+  
+  /* main右側ディスプレイ ↓ */
+  .customer-container {
+    width: 330px;
+    height: 662px;
+    font-size: 14px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* コンテナタイトル「お客様情報入力」 */
+  h1 {
+    font-size: 18px;
+  }
+    /* お客様情報入力コンテナ */
+    .enterCustomerInformation-container {
+      width: 330px;
+      height: 465px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    /* お客様情報入力コンテナ全体のinput[type="text"]の設定 */
+    input[type="text"] {
+      padding-left: 21px;
+    }
+      /* input欄タイトル コンテナ */
+      .inputTitle-container {
+        padding-bottom: 5px;
+        font-size: 14px;
+        display: flex;
+      }
+      /* ※マーク */
+      .asutarisuku-mark {
+        padding-left: 5px;
+        font-size: 10px;
+        color: #ff8d8d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* お客様情報入力欄 */
+      .customer-container input {
+        width: 330px;
+        height: 45px;
+        border: 1px solid;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      /* 住所情報記入欄エリア全体 */
+      .entireAddressField-container {
+        width: 330px;
+        height: 172px;
+        font-size: 12px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+      }
+        /* 郵便番号と都道府県コンテナ */
+        .postCode-prefectures-container {
+          width: 330px;
+          display: flex;
+          justify-content: space-between;
+        }
+        /* 郵便番号と都道府県のinputタグ */
+        .postCode-container input, .prefectures-container input {
+          width: 150px;
+          height: 45px;
+        }
+        /* 市区町村入力欄 */
+        .municipalities-container {
+          padding-top: 20px;
+        }
+      /* お支払い方法入力コンテナ */
+      .paymentMethod-container {
+        width: 330px;
+        height: 61px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+      }
+        /* 支払い方法選択項目コンテナ */
+        .paymentSelector-container {
+          font-size: 12px;
+          display: flex;
+          justify-content: space-between;
+        }
+        /* radioボタン基本レイアウト消去 */
+        input[type="radio"] {
+          display: none;
+        }
+        /* radioボタン改善レイアウト */
+        input[type="radio"] + label {
+          position: relative;
+          padding: 5px 16px 5px 25px;
+          display: inline-block;
+        }
+        
+        input[type="radio"] + label::before, input[type="radio"] + label::after {
+          content: "";
+          position: absolute;
+          border: 1px solid #656565;
+          border-radius: 50%;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          box-shadow: none;
+        }
+
+        input[type="radio"] + label::before {
+          width: 20px;
+          height: 20px;
+        }
+
+        input[type="radio"] + label::after {
+          width: 12px;
+          height: 12px;
+          left: 4px;
+          background-color: white;
+        }
+
+        /* ragioボタンチェック時の内円の色指定 */
+        input[type="radio"]:checked + label::after {
+          background-color: #656565;
+        }
+
+    /* 入力内容確認button使用可能時の仕様 */
+    #confirmInputContents {
+      width: 330px;
+      height: 70px;
+      font-size: 14px;
+      /* colorは"#DEB089"がdefault.cssから適応 */
+    }
+    /* 入力内容確認button使用不可時の仕様 */
+    #confirmInputContents:disabled {
+      background-color: #deb08999;
+    }

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OUEN_EC_App</title>
+    <meta
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0"
+    >
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" href="../common/default-style.css">
+    <link rel="stylesheet" href="./cart.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+      <!-- ロゴ -->
+        <div>
+          <img class="rogo" id="headerRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
+        </div>
+      <!-- ショッピングカート -->
+        <div class="shoppingCart-container">
+          <span>Shopping Cart</span>
+          <button type="button" id="shoppingCartButton">
+            <!-- カートロゴ -->
+            <img class="shoppingCart-img" src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg">
+            <!-- カート内個数 -->
+            <div id="quantityInCart">
+              <div>1</div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="inCart-container">
+      <!-- main左側ディスプレイ -->
+        <!-- アイテム内容コンテナ -->
+        <div class="itemContents-container">
+          <!-- カート内情報確認コンテナ -->
+          <div class="checkCartInformation-container">
+            <!-- 商品画像 -->
+            <img src="https://kadai-1-9fce0.web.app/images/short_overalls_brown-2.png">
+            <!-- 選択内容詳細＆消去buttonコンテナ -->
+            <div class="selectionDetails-eraseButton-container">
+              <!-- 選択内容詳細コンテナ -->
+              <div class="selectionDetails-container">
+                <!-- 商品名＆sizeコンテナ -->
+                <div class="productName-size-container">
+                  <div id="productName">Short overalls</div>
+                  <div id="productSize">size 100</div>
+                </div>
+                <!-- 商品数＆金額コンテナ -->
+                <div class="purchaseAmount-container">
+                  <div id="numberOfSelections">1点</div>
+                  <div id="purchaseAmount">￥7,000</div>
+                </div>  
+              </div>
+              <!-- 消去buttonコンテナ -->
+              <div class="eraseButton-container">
+                <button type="button" id="eraseButton">消去</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- カート内情報確認コンテナ -->
+          <div class="checkCartInformation-container">
+            <!-- 商品画像 -->
+            <img src="https://kadai-1-9fce0.web.app/images/bloomers-2.png">
+            <!-- 選択内容詳細＆消去buttonコンテナ -->
+            <div class="selectionDetails-eraseButton-container">
+              <!-- 選択内容詳細コンテナ -->
+              <div class="selectionDetails-container">
+                <!-- 商品名＆sizeコンテナ -->
+                <div class="productName-size-container">
+                  <div id="productName">Bloomers</div>
+                  <div id="productSize">size 90</div>
+                </div>
+                <!-- 商品数＆金額コンテナ -->
+                <div class="purchaseAmount-container">
+                  <div id="numberOfSelections">1点</div>
+                  <div id="purchaseAmount">￥5,000</div>
+                </div>  
+              </div>
+              <!-- 消去buttonコンテナ -->
+              <div class="eraseButton-container">
+                <button type="button" id="eraseButton">消去</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="totalAmount-container">
+            <div class="amountDisplay-container">
+              <div>Total</div>
+              <div id="totalAmount">¥12,000</div>
+            </div>
+            <div class="continuePurchasing-container">
+              <button type="button" id="continuePurchasing">
+                ショッピングを続ける
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="customer-container">
+          <h1>お客様情報入力</h1>
+
+          <div class="enterCustomerInformation-container">
+            <!-- 名前記入エリア ↓ -->
+            <div class="name-container">
+              <div class="inputTitle-container">
+                お名前
+                <div class="asutarisuku-mark">※</div>
+              </div>
+              <input type="text" class="information-input" id="nameInput">
+            </div>
+            <!-- メールアドレス記入エリア ↓ -->
+            <div class="email-container">
+              <div class="inputTitle-container">
+                メールアドレス
+                <div class="asutarisuku-mark">※</div>
+              </div>
+              <input type="text" class="information-input" id="emailInput">
+            </div>
+
+            <!-- 住所記入エリア ↓ -->
+            <div class="entireAddressField-container">
+              <!-- エリアタイトルと※を納めるコンテナ -->
+              <div class="inputTitle-container">
+                ご住所
+                <div class="asutarisuku-mark">※</div>
+              </div>
+              <!-- 郵便番号と都道府県を納めるコンテナ -->
+              <div class="postCode-prefectures-container">
+                <div class="postCode-container">
+                  <div>郵便番号</div>
+                  <input type="text">
+                </div>
+                <div class="prefectures-container">
+                  <div>都道府県</div>
+                  <input type="text">
+                </div>
+              </div>
+              <!-- 市区町村を納めるコンテナ -->
+              <div class="municipalities-container">
+                <div>市区町村番号　建物名・部屋番号</div>
+                <input type="text" class="information-input">
+              </div>
+            </div>
+
+            <!-- お支払い方法選択エリア ↓ -->
+            <div class="paymentMethod-container">
+              <div class="inputTitle-container">
+                お支払い方法
+                <div class="asutarisuku-mark">※</div>
+              </div>
+              <div class="paymentSelector-container">
+                <div>
+                  <input id="creditCard" name="status" type="radio">
+                  <label for="creditCard">クレジットカード</lavel>
+                </div>
+                <div>
+                  <input id="cashOnDelivery" name="status" type="radio">
+                  <label for="cashOnDelivery">銀行振込</lavel>
+                </div>
+                <div>
+                  <input id="bankTransfer" name="status" type="radio">
+                  <label for="bankTransfer">代金引換</lavel>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        <button disabled type="button" id="confirmInputContents">入力内容を確認する</button>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <img class="rogo" id="footerRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
+      </div>
+      <p>Copyright(C) 20XX kids design All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://kadai-1-9fce0.web.app/scripts/data.js"></script>
+    <script src="./common/default.js"></script>
+  </body>
+</html>

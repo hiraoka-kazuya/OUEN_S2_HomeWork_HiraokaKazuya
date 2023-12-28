@@ -1,0 +1,59 @@
+.item-image {
+  width: 448px;
+  height: 448px;
+}
+
+.itemDetail-container {
+  padding: 50px 0 126px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.productInformation-container {
+  font-size: 26px;
+  width: 330px;
+  height: 327px;
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+.detailedSelection-container {
+  font-size: 18px;
+  width: 198px;
+  height: 102px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.productSize-container {
+  display: flex;
+  align-items: center;
+  justify-content:space-between
+}
+
+.productQuantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+select {
+  width: 80px;
+  height: 45px;
+  border-radius: 10px;
+  text-align: right;
+}
+
+/* selectタグの矢印を未選択の時以外は非表示にする（jsで対応？） */
+/* option {
+  appearance: none;
+} */
+
+#addToCartButton {
+  height: 70px;
+  font-size: 14px;
+}

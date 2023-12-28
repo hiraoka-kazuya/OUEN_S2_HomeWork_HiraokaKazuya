@@ -7,45 +7,59 @@
       content="width=device-width, initial-scale=1.0"
     >
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <link rel="stylesheet" href="./common/default-style.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../common/default-style.css">
   </head>
   
   <body>
     <header>
-      <div class="topPageHeader-container">
-        <img class="rogo" id="headerRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
-        <input type="text" id="search-title-input" value="Search ...">
-        <button
-          type="button"
-          id="searchbutton"
-        >
-          <img id="searchMark" src="https://kadai-1-9fce0.web.app/images/ionic-ios-search.svg">
-        </button>
-        <span>Shopping Cart</span>
-        <button 
-          type="button" 
-          id="shoppingCart-button" 
-        >
-          <img src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg">
-          <div id="quantityInCart">1</div>
-        </button>
+      <div class="header-container">
+      <!-- ロゴ -->
+        <div>
+          <img class="rogo" id="headerRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
+        </div>
+      <!-- 検索欄＆検索ボタン -->
+        <div class="searchInput-container">
+          <div>
+            <input type="text" id="searchTitleInput" placeholder="Search ...">
+          </div>
+        
+          <div>
+            <button
+              type="button"
+              id="searchbutton"
+            >
+              <img id="searchMark" src="https://kadai-1-9fce0.web.app/images/ionic-ios-search.svg">
+            </button>
+          </div>
+        </div>
+      <!-- ショッピングカート -->
+        <div class="shoppingCart-container">
+          <span>Shopping Cart</span>
+          <button type="button" id="shoppingCartButton">
+            <!-- カートロゴ -->
+            <img class="shoppingCart-img" src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg">
+            <!-- カート内個数 -->
+            <div id="quantityInCart">
+              <div>1</div>
+            </div>
+          </button>
+        </div>
       </div>
-      <img id="imagePicture" src="https://kadai-1-9fce0.web.app/images/olena-sergienko.png" >
     </header>
 
-    <body>
-      <h1 class="itemList">Item List</h1>
+    <main>
+      <img id="imagePicture" src="https://kadai-1-9fce0.web.app/images/olena-sergienko.png" >
+      <h1 id="itemListTitle">Item List</h1>
       <!-- 検索条件に該当が無ければ下記のコメントを表示 -->
       <div id="searchResults">検索条件に該当する商品がありません</div>
       <!-- 検索条件に該当があれば商品リストを表示 -->
-      <div id="list">
+      <div id="itemList">
       </div> 
-    </body>
+    </main>
 
     <footer>
         <div>
-          <img class="rogo" id="homePageBodyRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
+          <img class="rogo" id="footerRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
         </div>
         <p>Copyright(C) 20XX kids design All Rights Reserved.</p>
     </footer>
