@@ -8,7 +8,8 @@
     >
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel="stylesheet" href="../common/default-style.css">
-    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="../cart/cart.css">
+    <link rel="stylesheet" href="./confirmation.css">
   </head>
 
   <body>
@@ -57,10 +58,6 @@
                   <div id="purchaseAmount">￥7,000</div>
                 </div>  
               </div>
-              <!-- 消去buttonコンテナ -->
-              <div class="eraseButton-container">
-                <button type="button" id="eraseButton">消去</button>
-              </div>
             </div>
           </div>
 
@@ -83,10 +80,6 @@
                   <div id="purchaseAmount">￥5,000</div>
                 </div>  
               </div>
-              <!-- 消去buttonコンテナ -->
-              <div class="eraseButton-container">
-                <button type="button" id="eraseButton">消去</button>
-              </div>
             </div>
           </div>
 
@@ -95,86 +88,35 @@
               <div>Total</div>
               <div id="totalAmount">¥12,000</div>
             </div>
-            <div class="continuePurchasing-container">
-              <button type="button" id="continuePurchasing">
-                ショッピングを続ける
-              </button>
-            </div>
           </div>
         </div>
 
         <div class="customer-container">
-          <h1>お客様情報入力</h1>
+          <h1>お客様情報確認</h1>
 
           <div class="enterCustomerInformation-container">
             <!-- 名前記入エリア ↓ -->
             <div class="name-container">
-              <div class="inputTitle-container">
-                お名前
-                <div class="asutarisuku-mark">※</div>
-              </div>
-              <input type="text" class="information-input" id="nameInput">
+              cart画面で登録した「お客様の名前」表示
             </div>
-            <!-- メールアドレス記入エリア ↓ -->
+            <!-- メールアドレスエリア ↓ -->
             <div class="email-container">
-              <div class="inputTitle-container">
-                メールアドレス
-                <div class="asutarisuku-mark">※</div>
-              </div>
-              <input type="text" class="information-input" id="emailInput">
+              cart画面で登録した「メールアドレス」表示
             </div>
 
             <!-- 住所記入エリア ↓ -->
             <div class="entireAddressField-container">
-              <!-- エリアタイトルと※を納めるコンテナ -->
-              <div class="inputTitle-container">
-                ご住所
-                <div class="asutarisuku-mark">※</div>
-              </div>
-              <!-- 郵便番号と都道府県を納めるコンテナ -->
-              <div class="postCode-prefectures-container">
-                <div class="postCode-container">
-                  <div>郵便番号</div>
-                  <input type="text">
-                </div>
-                <div class="prefectures-container">
-                  <div>都道府県</div>
-                  <input type="text">
-                </div>
-              </div>
-              <!-- 市区町村を納めるコンテナ -->
-              <div class="municipalities-container">
-                <div>市区町村番号　建物名・部屋番号</div>
-                <input type="text" class="information-input">
-              </div>
+              cart画面で登録した「郵便番号・都道府県・市区町村」を1行にまとめて表示
             </div>
 
             <!-- お支払い方法選択エリア ↓ -->
             <div class="paymentMethod-container">
-              <div class="inputTitle-container">
-                お支払い方法
-                <div class="asutarisuku-mark">※</div>
-              </div>
-              <div class="paymentSelector-container">
-                <div>
-                  <input id="creditCard" name="status" type="radio">
-                  <label for="creditCard">クレジットカード</lavel>
-                </div>
-                <div>
-                  <input id="cashOnDelivery" name="status" type="radio">
-                  <label for="cashOnDelivery">銀行振込</lavel>
-                </div>
-                <div>
-                  <input id="bankTransfer" name="status" type="radio">
-                  <label for="bankTransfer">代金引換</lavel>
-                </div>
-              </div>
+              cart画面で登録した「支払い方法」を表示
             </div>
 
           </div>
-        <button disabled type="button" id="confirmInputContents">入力内容を確認する</button>
-        <!-- cartが空の場合『ショッピングカートに商品がありません』というメッセージと
-          『ショッピングを続ける』buttonのみを表示 -->
+        <button type="button" id="orderConfirmed">注文を確定する</button>
+        <button type="button" id="returnToCart">カートへ戻る</button>
       </div>
     </main>
 
