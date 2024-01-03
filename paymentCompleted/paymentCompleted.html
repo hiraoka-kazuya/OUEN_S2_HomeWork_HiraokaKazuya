@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OUEN_EC_App</title>
+    <meta
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0"
+    >
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" href="../common/default-style.css">
+    <link rel="stylesheet" href="./paymentCompleted.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+      <!-- ロゴ -->
+        <div>
+          <img class="rogo" id="headerRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
+        </div>
+      <!-- ショッピングカート -->
+        <div class="shoppingCart-container">
+          <span>Shopping Cart</span>
+          <button type="button" id="shoppingCartButton">
+            <!-- カートロゴ -->
+            <img class="shoppingCart-img" src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg">
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="thankYouMessage-container">
+        <div id="thankYouMessage">お買い上げいただきありがとうございました。</div>
+        <button id="continuePurchasing">ショッピングを続ける</button>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <img class="rogo" id="footerRogo" src="https://kadai-1-9fce0.web.app/images/ec_logo1.png">
+      </div>
+      <p>Copyright(C) 20XX kids design All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://kadai-1-9fce0.web.app/scripts/data.js"></script>
+    <script src="./common/default.js"></script>
+  </body>
+</html>

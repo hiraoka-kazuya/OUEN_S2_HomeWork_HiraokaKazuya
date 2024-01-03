@@ -91,32 +91,40 @@
           </div>
         </div>
 
-        <div class="customer-container">
-          <h1>お客様情報確認</h1>
-
-          <div class="enterCustomerInformation-container">
-            <!-- 名前記入エリア ↓ -->
-            <div class="name-container">
-              cart画面で登録した「お客様の名前」表示
+        <div class="customerniformation-confirmation">
+          <!-- 情報表示欄全体 -->
+          <div class="informationDisplay-container">
+            <!-- 表示欄タイトル -->
+            <h1>お客様情報確認</h1>
+            <!-- 名前確認エリア ↓ -->
+            <div class="nameConfirmation-container">
+              登録した「お客様の名前」表示
+              <div id="honorificTitle">様</div>
             </div>
-            <!-- メールアドレスエリア ↓ -->
-            <div class="email-container">
-              cart画面で登録した「メールアドレス」表示
-            </div>
-
-            <!-- 住所記入エリア ↓ -->
-            <div class="entireAddressField-container">
-              cart画面で登録した「郵便番号・都道府県・市区町村」を1行にまとめて表示
+            <!-- メールアドレス確認欄 ↓ -->
+            <div class="emailConfirmation-container">
+              登録した「メールアドレス」表示
             </div>
 
-            <!-- お支払い方法選択エリア ↓ -->
-            <div class="paymentMethod-container">
-              cart画面で登録した「支払い方法」を表示
+            <!-- 住所確認欄 ↓ -->
+            <div class="addressConfirmation-container">
+              <div id="postCode">
+                〒xxx-xxxx
+              </div>
+              「都道府県 等」をまとめて表示
             </div>
 
+            <!-- お支払い方法確認欄 ↓ -->
+            <div class="paymentMethodConfirmation-container">
+              登録した「支払い方法」を表示
+            </div>
           </div>
-        <button type="button" id="orderConfirmed">注文を確定する</button>
-        <button type="button" id="returnToCart">カートへ戻る</button>
+
+          <!-- button表示欄 ↓ -->
+          <div class="buttonDisplay-container">
+            <button type="button" id="orderConfirmed">注文を確定する</button>
+            <button type="button" id="returnToCart">カートへ戻る</button>
+          </div>
       </div>
     </main>
 

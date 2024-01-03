@@ -1,0 +1,84 @@
+/* 一部cart.cssから内容継承 */
+/* お客様情報確認欄・button選択欄 全体適応内容 */
+.customerniformation-confirmation {
+  width: 330px;
+  height: 583px;
+  font-size: 18px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+  /* 情報表示欄 全体 */
+  .informationDisplay-container {
+    width: 330px;
+    height: 323px;
+    font-size: 16px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .informationDisplay-container h1 {
+    font-size: 18px;
+  }
+    /* 名前確認エリア */
+    .nameConfirmation-container {
+      width: 330px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #656565;
+      position: relative;
+    }
+      /* 敬称欄 */
+      #honorificTitle {
+        position: absolute;
+        right: 0;
+      }
+    /* メールアドレス確認欄 */
+    .emailConfirmation-container {
+      width: 330px;
+      border-bottom: 1px solid #656565;
+      display: flex;
+      justify-content: center;
+    }
+    /* 住所確認欄 */
+    .addressConfirmation-container {
+      width: 330px;
+      border-bottom: 1px solid #656565;
+      display: flex;
+      justify-content: center;
+    }
+      /* 郵便番号 */
+      #postCode {
+        font-size: 14px;
+      }
+    /* 支払い方法確認欄 */
+    .paymentMethodConfirmation-container {
+      width: 330px;
+      border-bottom: 1px solid #656565;
+      display: flex;
+      justify-content: center;
+    }
+  /* button表示欄 */
+  .buttonDisplay-container {
+    width: 330px;
+    height: 190px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+    /* 注文確認button */
+    #orderConfirmed {
+      width: 330px;
+      height: 70px;
+      font-size: 14px;
+    }
+    /* カートへ戻るbutton */
+    #returnToCart {
+      width: 330px;
+      height: 70px;
+      font-size: 14px;
+      border: 1px solid;
+      color: #333;
+      background-color: white;
+    }

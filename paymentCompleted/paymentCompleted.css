@@ -1,0 +1,26 @@
+/* main全体 */
+main {
+  padding-top: 130px;
+  padding-bottom: 147px;
+  display: flex;
+  justify-content: center;
+}
+
+  /* ありがとうメッセージとボタン全体 */
+  .thankYouMessage-container {
+    width: 543px;
+    height: 151px;
+    font-size: 26px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+    #thankYouMessage {
+      letter-spacing: -1px;
+    }
+    #continuePurchasing {
+      width: 330px;
+      height: 70px;
+      font-size: 14px;
+    }
