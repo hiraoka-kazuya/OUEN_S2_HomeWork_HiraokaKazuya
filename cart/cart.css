@@ -4,7 +4,6 @@ main {
 /* カート内情報（mainの全体コンテナ） */
 .inCart-container {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
 }
   /* main左側ディスプレイ ↓ */

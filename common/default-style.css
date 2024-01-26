@@ -8,12 +8,18 @@ button {
   color: #fff;
   background-color: #deb089;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 h1 {
   font-size: 26px;
+}
+
+/* ロゴ */
+.rogo {
+  width: 145px;
+  height: 145px;
 }
 
 /* bodyエリア ↓ */
@@ -27,7 +33,7 @@ body {
   header {
     max-width: 920px;
     margin: 0 auto;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid #656565;
   }
 
   /* 「ヘッダーロゴ、検索欄、検索ボタン」コンテナ */
@@ -36,12 +42,6 @@ body {
     align-items: end;
     justify-content: space-between;
   }
-
-    /* ヘッダーロゴ */
-    #headerRogo {
-      width: 145px;
-      height: 145px;
-    }
 
     /* 検索欄・検索ボタン・検索マーク */
     .searchInput-container {
@@ -83,16 +83,30 @@ body {
 
   /* shoppingCart-containerエリア ↓ */
   .shoppingCart-container {
+    display: flex;
     margin-bottom: 10px;
   }
+    /* カートタイトル */
+    .shoppingCart-container {
+      font-size: 14px;
+      align-items:end;
+    }
     /* ショッピングカートボタン */
     #shoppingCartButton {
       width: 37px;
       height: 41px;
+      padding: 0 0 -5px;
       position: relative;
       background-color: unset;
     }
 
+    .cartRogo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 13px;
+    }
     /* カートロゴ */
     .shoppingCart-img {
       width: 33px;
@@ -101,19 +115,20 @@ body {
 
     /* カート内個数表示 */
     #quantityInCart {
+      box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
       position: absolute;
-      top: -7px;
-      left: 25px;
+      top: 3px;
+      left: 22px;
       font-size: 10px;
       color: white;
       border: 1px solid;
       border-color: #333;
       border-radius: 50%;
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       background-color: #deb089;
     }
 
@@ -149,19 +164,33 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 126px;
-    cursor: pointer;
   }
 
     /* item list内の各アイテムコンテナ */
       .itemList-container {
+        width: 212px;
+        height: 263px;
         margin-bottom: 50px;
+        cursor: pointer;
       }
+      .itemList-container span {
+        color: #656565;
+      }
+
+    /* 検索で該当がない時の #itemList */
+    #searchResults {
+      width: 920px;
+      font-size: 26px;
+      display: flex;
+      justify-content: center;
+    }
 
   /* body内footerエリア ↓ */
   footer {
     border-top: 1px solid;
     max-width: 920px;
     margin: 0 auto;
+    font-size: 12px;
   }
 
     footer div {
@@ -171,9 +200,149 @@ main {
       flex-grow: 1;
     }
 
+
     footer p {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-grow: 1;
     }
+
+
+
+
+/* レスポンシブデザイン(tablet) */
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  body {
+    padding: 30px 0 24px;
+  }
+  .rogo {
+    width: 100px;
+    height: 100px;
+  }  
+
+    /* headerエリア */
+    header {
+      max-width: 534px;
+    }
+    #searchTitleInput {
+      width: 200px;
+      height: 35px;
+      box-shadow: none;
+    }
+    #searchbutton {
+      width: 60px;
+      height: 35px;
+      box-shadow: none;
+    }
+    #searchMark {
+      width: 18px;
+      height: 21px;
+    }
+    #cartTitle {
+      display: none;
+    }
+
+    /* mainエリア */
+    main {
+      max-width: 534px;
+    }
+    .itemList-container {
+      width: 163px;
+      height: 213px;
+      font-size: 14px;
+    }
+    .itemList-container img {
+      width: 162px;
+      height: 162px;
+    }
+    #searchResults {
+      width: 534px;
+      font-size: 20px;
+    }
+
+      /* footerエリア */
+  footer {
+    max-width: 534px;
+  }
+}
+
+
+/* レスポンシブデザイン(mobile) */
+@media all and (max-width: 390px) {
+  body {
+    padding: 20px 0 10px;
+  }
+  .rogo {
+    width: 54px;
+    height: 54px;
+  }  
+
+  /* headerエリア */
+  header {
+    max-width: 358px;
+  }
+  #searchTitleInput {
+    width: 186px;
+    height: 26px;
+  }
+  #searchbutton {
+    width: 40px;
+    height: 26px;
+  }
+  #searchMark {
+    width: 10px;
+    height: 12px;
+  }
+  /* ショッピングカートボタン */
+  #shoppingCartButton {
+    width: 29px;
+    height: 34px;
+  }
+  
+  /* カートロゴ */
+  .shoppingCart-img {
+    width: 26px;
+    height: 24px;
+  }
+  #quantityInCart {
+    width: 16px;
+    height: 16px;
+    left: 17px;
+    font-size: 10px;
+  }
+
+  /* mainエリア */
+  main {
+    max-width: 358px;
+  }
+
+  #itemList {
+    padding-bottom: 100px;
+  }
+
+  .itemList-container {
+    margin-bottom: 42px;
+    width: 171px;
+    height: 222px;
+  }
+  .itemList-container img {
+    width: 171px;
+    height: 171px;
+  }
+  #searchResults {
+    width: 358px;
+    font-size: 14px;
+  }
+
+
+  
+  /* footerエリア */
+  footer {
+    max-width: 358px;
+    font-size: 10px;
+  }
+}

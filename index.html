@@ -34,10 +34,12 @@
         </div>
       <!-- ショッピングカート -->
         <div class="shoppingCart-container">
-          <span>Shopping Cart</span>
+          <div id="cartTitle">Shopping Cart</div>
           <button type="button" id="shoppingCartButton">
             <!-- カートロゴ -->
-            <img class="shoppingCart-img" src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg">
+            <div class="cartRogo-container">
+              <img class="shoppingCart-img" src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg">
+            </div>
             <!-- カート内個数 -->
             <div id="quantityInCart">
               <div>1</div>
@@ -50,10 +52,9 @@
     <main>
       <img id="imagePicture" src="https://kadai-1-9fce0.web.app/images/olena-sergienko.png" >
       <h1 id="itemListTitle">Item List</h1>
-      <!-- 検索条件に該当が無ければ下記のコメントを表示 -->
-      <div id="searchResults">検索条件に該当する商品がありません</div>
       <!-- 検索条件に該当があれば商品リストを表示 -->
       <div id="itemList">
+        <!-- item一覧や検索条件に該当するitemが表示される -->
       </div> 
     </main>
 
