@@ -49,10 +49,13 @@ select {
 }
 
 /* selectタグの矢印を未選択の時以外は非表示にする（jsで対応？） */
-/* option {
-  appearance: none;
-} */
-
+#addToCartButton:disabled {
+  width: 330px;
+  height: 70px;
+  font-size: 14px;
+  background-color: #DEB08999;
+  cursor: auto;
+}
 #addToCartButton {
   width: 330px;
   height: 70px;
