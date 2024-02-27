@@ -1,12 +1,20 @@
-for (let item of __item_data) {
-  const listItem = document.createElement('div')
-  listItem.innerHTML = `
-    <div key="${item.id}" class="itemList-container"
-      onclick="pageTransition(${item.id})">
-        <img src="${item.image}" />
-        <div>${item.itemName}</div>
-        <span>¥${item.price}</span>
-    </div>
-  `
-  document.querySelector('#itemList').appendChild(listItem)
+const STOCK_KEY = 'stock'
+let stock = localStorage.getItem(STOCK_KEY)
+
+
+
+function setStock() {
+  let list = getItemData()
+  const stockStatus = []
+  // オブジェクトに在庫項目追加
+  list.map((item) => {
+    stockStatus.push({...item,stock:3})
+  })
+  localStorage.setItem(STOCK_KEY, JSON.stringify(stockStatus))
+}
+
+function getStock(id) {
+  const nowStock = localStorage.getItem(STOCK_KEY)
+  const item2 = nowStock.find((e) => e.id === id)
+  return item2
 }
