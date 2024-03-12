@@ -37,63 +37,15 @@
       <div class="inCart-container">
       <!-- main左側ディスプレイ -->
         <!-- アイテム内容コンテナ -->
-        <div class="itemContents-container">
-          <!-- カート内情報確認コンテナ -->
-          <div class="checkCartInformation-container">
-            <!-- 商品画像 -->
-            <img src="https://kadai-1-9fce0.web.app/images/short_overalls_brown-2.png">
-            <!-- 選択内容詳細＆消去buttonコンテナ -->
-            <div class="selectionDetails-eraseButton-container">
-              <!-- 選択内容詳細コンテナ -->
-              <div class="selectionDetails-container">
-                <!-- 商品名＆sizeコンテナ -->
-                <div class="productName-size-container">
-                  <div id="productName">Short overalls</div>
-                  <div id="productSize">size 100</div>
-                </div>
-                <!-- 商品数＆金額コンテナ -->
-                <div class="purchaseAmount-container">
-                  <div id="numberOfSelections">1点</div>
-                  <div id="purchaseAmount">￥7,000</div>
-                </div>  
-              </div>
-              <!-- 消去buttonコンテナ -->
-              <div class="eraseButton-container">
-                <button type="button" id="eraseButton">消去</button>
-              </div>
-            </div>
+        <div class="itemContents-container" >
+          <div id="itemContents">
           </div>
 
-          <!-- カート内情報確認コンテナ -->
-          <div class="checkCartInformation-container">
-            <!-- 商品画像 -->
-            <img src="https://kadai-1-9fce0.web.app/images/bloomers-2.png">
-            <!-- 選択内容詳細＆消去buttonコンテナ -->
-            <div class="selectionDetails-eraseButton-container">
-              <!-- 選択内容詳細コンテナ -->
-              <div class="selectionDetails-container">
-                <!-- 商品名＆sizeコンテナ -->
-                <div class="productName-size-container">
-                  <div id="productName">Bloomers</div>
-                  <div id="productSize">size 90</div>
-                </div>
-                <!-- 商品数＆金額コンテナ -->
-                <div class="purchaseAmount-container">
-                  <div id="numberOfSelections">1点</div>
-                  <div id="purchaseAmount">￥5,000</div>
-                </div>  
-              </div>
-              <!-- 消去buttonコンテナ -->
-              <div class="eraseButton-container">
-                <button type="button" id="eraseButton">消去</button>
-              </div>
-            </div>
-          </div>
-
+          <!-- 合計金額表示コンテナ -->
           <div class="totalAmount-container">
             <div class="amountDisplay-container">
               <div>Total</div>
-              <div id="totalAmount">¥12,000</div>
+              <div id="totalAmount"></div>
             </div>
             <div class="continuePurchasing-container">
               <button type="button" id="continuePurchasing">
@@ -135,17 +87,17 @@
               <div class="postCode-prefectures-container">
                 <div class="postCode-container">
                   <div>郵便番号</div>
-                  <input type="text">
+                  <input type="text" id="postCode">
                 </div>
                 <div class="prefectures-container">
                   <div>都道府県</div>
-                  <input type="text">
+                  <input type="text" id="prefectures">
                 </div>
               </div>
               <!-- 市区町村を納めるコンテナ -->
               <div class="municipalities-container">
                 <div>市区町村番号　建物名・部屋番号</div>
-                <input type="text" class="information-input">
+                <input type="text" class="information-input" id="cityNumber">
               </div>
             </div>
 
@@ -155,9 +107,9 @@
                 お支払い方法
                 <div class="asutarisuku-mark">※</div>
               </div>
-              <div class="paymentSelector-container">
+              <form class="paymentSelector-container">
                 <div>
-                  <input id="creditCard" name="status" type="radio">
+                  <input id="creditCard" name="status" type="radio" value="クレジットカード">
                   <label for="creditCard">クレジットカード</lavel>
                 </div>
                 <div>
@@ -168,11 +120,12 @@
                   <input id="bankTransfer" name="status" type="radio">
                   <label for="bankTransfer">代金引換</lavel>
                 </div>
-              </div>
+              </form>
             </div>
 
           </div>
-        <button disabled type="button" id="confirmInputContents">入力内容を確認する</button>
+          <!-- disabledをボタンに追加 ↓ -->
+        <button  type="button" id="confirmInputContents">入力内容を確認する</button>
         <!-- cartが空の場合『ショッピングカートに商品がありません』というメッセージと
           『ショッピングを続ける』buttonのみを表示 -->
       </div>
@@ -186,6 +139,7 @@
     </footer>
 
     <script src="https://kadai-1-9fce0.web.app/scripts/data.js"></script>
-    <script src="./common/default.js"></script>
+    <script src="../common/default.js"></script>
+    <script src="./cart.js"></script>
   </body>
 </html>

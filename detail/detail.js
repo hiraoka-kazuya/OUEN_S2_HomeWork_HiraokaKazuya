@@ -1,13 +1,17 @@
-const searchParams = new URLSearchParams(window.location.search)
+const id = searchParams.get('id')
 const image = searchParams.get('image')
-const itemName =searchParams.get('itemName')
-const price =searchParams.get('price')
-const nowStock = stock
+const itemName = searchParams.get('itemName')
+const price = searchParams.get('price')
+const priceString = searchParams.get('priceString')
+const nowStock = searchParams.get('stock')
 
-console.log(nowStock)
-console.log(image)
 console.log(itemName)
+console.log(id)
+console.log(image)
 console.log(price)
+console.log(priceString)
+console.log(nowStock)
+
 
 // アイテム写真エリア
 const itemImage = document.createElement('div')
@@ -46,7 +50,7 @@ detailName.innerHTML = `
         </form>
       </div>
     </div>
-    <div>¥ ${price}（税込）</div>
+    <div>${priceString}（税込）</div>
     <button type="button" id="addToCartButton" disabled="true">カートに入れる</button>
   </div>
 `
@@ -56,22 +60,19 @@ document.querySelector('.itemDetail-container').appendChild(detailName)
   function activityStatus() {
     // フォームのname「formS」とセレクトボックスのname「size」で対象を特定
     const sizeElement = document.formS.size 
-    console.log(sizeElement, typeof sizeElement)
     // selectedIndexで選択されている項目(数値)を取得
     const sizeNum = sizeElement.selectedIndex
-    console.log(sizeNum, typeof sizeNum, 'sizeNum')
 
     // フォームのname「formQ」とセレクトボックスのname「quantity」で対象を特定
     const quantityElement = document.formQ.quantity 
-    console.log(quantityElement, typeof quantityElement)
       // selectedIndexで選択されている項目(数値)を取得
     const quantityNum = quantityElement.selectedIndex
-    console.log(quantityNum, typeof quantityNum, 'quantityNum')
 
     // 「size」と「quantity」のセレクトボックスがそれぞれ「初期値0（''）」以外の条件でボタン活性化
     if (sizeNum > 0 && quantityNum > 0) {
       document.querySelector('#addToCartButton').disabled = false
       return {
+        sizeElement,
         quantityElement
       }
     }
@@ -85,20 +86,29 @@ document.querySelector('#selectQuantity')
 
 
 // 「カートに入れる」ボタン活性化後、ボタンクリック時のアクション
-  function addToCart() {
-    
-    // // activityStatus()関数からセレクトボックス「quantity」を対象とした定数を取得
-    // const quantityEl = activityStatus().quantityElement
-    // // セレクトボックス「quantity」で選択中の項目の数値（選択肢の何番目か）を取得
-    // const num = quantityEl.selectedIndex
-    // console.log(num, typeof num, 'クリック後num')
-    // // 取得した項目(数値)をoptionsに指定しvalue値(1,2,3)を取得
-    // const str = quantityEl.options[num].value
-    // console.log(str, typeof str, 'クリック後str')
-    // // 上記で作成したdivタグ'#cartInNum'にセレクトボックス「quantity」で選択中の項目の値（選択肢の何番目か）を表示
-    // document.getElementById("cartNum").textContent = str 
+  function sendDetails() {
+    // セレクトした各内容を読み込み
+      // activityStatus()関数からセレクトボックス「size」を対象とした定数を取得
+      const sizeEl = activityStatus().sizeElement
+      // セレクトボックス「size」で選択中の項目の数値（選択肢の何番目か）を取得
+      const sNum = sizeEl.selectedIndex
+      // 取得したsizeの項目(数値)をoptionsに指定しvalue値(1,2,3)を取得
+      const sizeStr = sizeEl.options[sNum].value
+      // activityStatus()関数からセレクトボックス「quantity」を対象とした定数を取得
+      const quantityEl = activityStatus().quantityElement
+      // セレクトボックス「quantity」で選択中の項目の数値（選択肢の何番目か）を取得
+      const qNum = quantityEl.selectedIndex
+      // 取得したquantityの項目(数値)をoptionsに指定しvalue値(1,2,3)を取得
+      const quantityStr = quantityEl.options[qNum].value
 
+      const selectItem = {id, image, itemName, price, priceString, sizeStr, quantityStr}
+    // 選択した内容をローカルストレージに保存する
+    setCart(selectItem) 
+    // その後そのプロパティをカートページに送りカートページに遷移する機能を追加
+    // const cartInformation = JSON.parse(localStorage.getItem(CART_KEY))
+    // const cartDetail = cartInformation.find((element) => Number(element.id) === selectItem)
+    location.href = `http://127.0.0.1:5500/cart/cart.html?id=${id}&image=${image}&itemName=${itemName}&price=${price}&priceString=${priceString}&size=${sizeStr}&quantity=${quantityStr}`
   }
 
   document.querySelector('#addToCartButton')
-  .addEventListener('click', addToCart)
+  .addEventListener('click', sendDetails)
