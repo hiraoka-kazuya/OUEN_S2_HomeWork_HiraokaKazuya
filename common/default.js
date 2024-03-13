@@ -37,9 +37,7 @@ function getCart(id) {
   return nowCart
 }
 
-// ページ遷移の際に渡したプロパティ
-const searchParams = new URLSearchParams(window.location.search)
-
+// ページリロード関数
 function reloadPage() {
   location.reload();
 }

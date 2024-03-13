@@ -60,14 +60,14 @@
         <div class="customer-container">
           <h1>お客様情報入力</h1>
 
-          <div class="enterCustomerInformation-container">
+          <div class="enterCustomerInformation-container" id="inputFields">
             <!-- 名前記入エリア ↓ -->
             <div class="name-container">
               <div class="inputTitle-container">
                 お名前
                 <div class="asutarisuku-mark">※</div>
               </div>
-              <input type="text" class="information-input" id="nameInput">
+              <input type="text" class="inputField" id="nameInput">
             </div>
             <!-- メールアドレス記入エリア ↓ -->
             <div class="email-container">
@@ -75,7 +75,7 @@
                 メールアドレス
                 <div class="asutarisuku-mark">※</div>
               </div>
-              <input type="text" class="information-input" id="emailInput">
+              <input type="text" class="inputField" id="emailInput">
             </div>
 
             <!-- 住所記入エリア ↓ -->
@@ -89,17 +89,17 @@
               <div class="postCode-prefectures-container">
                 <div class="postCode-container">
                   <div>郵便番号</div>
-                  <input type="text" id="postCode">
+                  <input type="text" class="inputField" id="postCode">
                 </div>
                 <div class="prefectures-container">
                   <div>都道府県</div>
-                  <input type="text" id="prefectures">
+                  <input type="text" class="inputField" id="prefectures">
                 </div>
               </div>
               <!-- 市区町村を納めるコンテナ -->
               <div class="municipalities-container">
                 <div>市区町村番号　建物名・部屋番号</div>
-                <input type="text" class="information-input" id="cityNumber">
+                <input type="text" class="inputField" id="cityNumber">
               </div>
             </div>
 
@@ -111,23 +111,24 @@
               </div>
               <form class="paymentSelector-container">
                 <div>
-                  <input id="creditCard" name="status" type="radio" value="クレジットカード">
+                  <input class="inputField" id="creditCard" name="payment" type="radio" value="クレジットカード">
                   <label for="creditCard">クレジットカード</lavel>
                 </div>
                 <div>
-                  <input id="cashOnDelivery" name="status" type="radio">
+                  <input class="inputField" id="cashOnDelivery" name="payment" type="radio" value="銀行振込">
                   <label for="cashOnDelivery">銀行振込</lavel>
                 </div>
                 <div>
-                  <input id="bankTransfer" name="status" type="radio">
+                  <input class="inputField" id="bankTransfer" name="payment" type="radio" value="代金引換">
                   <label for="bankTransfer">代金引換</lavel>
                 </div>
+                
               </form>
             </div>
 
           </div>
           <!-- disabledをボタンに追加 ↓ -->
-        <button  type="button" id="confirmInputContents">入力内容を確認する</button>
+        <button  type="button" id="confirmInputContents" disabled="true">入力内容を確認する</button>
         <!-- cartが空の場合『ショッピングカートに商品がありません』というメッセージと
           『ショッピングを続ける』buttonのみを表示 -->
       </div>

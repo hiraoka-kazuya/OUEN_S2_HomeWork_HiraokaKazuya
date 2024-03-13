@@ -1,3 +1,5 @@
+// ページ遷移の際に渡したプロパティ
+const searchParams = new URLSearchParams(window.location.search)
 const id = searchParams.get('id')
 const image = searchParams.get('image')
 const itemName = searchParams.get('itemName')
