@@ -107,8 +107,6 @@ document.querySelector('#selectQuantity')
     // 選択した内容をローカルストレージに保存する
     setCart(selectItem) 
     // その後そのプロパティをカートページに送りカートページに遷移する機能を追加
-    // const cartInformation = JSON.parse(localStorage.getItem(CART_KEY))
-    // const cartDetail = cartInformation.find((element) => Number(element.id) === selectItem)
     location.href = `http://127.0.0.1:5500/cart/cart.html?id=${id}&image=${image}&itemName=${itemName}&price=${price}&priceString=${priceString}&size=${sizeStr}&quantity=${quantityStr}`
   }
 

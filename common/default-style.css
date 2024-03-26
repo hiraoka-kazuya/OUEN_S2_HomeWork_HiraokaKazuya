@@ -43,6 +43,10 @@ body {
     justify-content: space-between;
   }
 
+    /* ヘッダーロゴ */
+    #headerRogo {
+      cursor: pointer;
+    }
     /* 検索欄・検索ボタン・検索マーク */
     .searchInput-container {
       margin-bottom: 10px;

@@ -27,9 +27,9 @@
             <img class="shoppingCart-img" src="https://kadai-1-9fce0.web.app/images/feather-shopping-cart.svg">
           </div>
           <!-- カート内個数 -->
-          <div id="quantityInCart">
+          <!-- <div id="quantityInCart">
             <div></div>
-          </div>
+          </div> -->
         </button>
       </div>
     </div>
@@ -109,17 +109,17 @@
                 お支払い方法
                 <div class="asutarisuku-mark">※</div>
               </div>
-              <form class="paymentSelector-container">
+              <form class="paymentSelector-container" id="paymentSelector">
                 <div>
-                  <input class="inputField" id="creditCard" name="payment" type="radio" value="クレジットカード">
+                  <input class="paymentField" id="creditCard" name="payment" type="radio" value="1">
                   <label for="creditCard">クレジットカード</lavel>
                 </div>
                 <div>
-                  <input class="inputField" id="cashOnDelivery" name="payment" type="radio" value="銀行振込">
+                  <input class="paymentField" id="cashOnDelivery" name="payment" type="radio" value="2">
                   <label for="cashOnDelivery">銀行振込</lavel>
                 </div>
                 <div>
-                  <input class="inputField" id="bankTransfer" name="payment" type="radio" value="代金引換">
+                  <input class="paymentField" id="bankTransfer" name="payment" type="radio" value="3">
                   <label for="bankTransfer">代金引換</lavel>
                 </div>
                 
