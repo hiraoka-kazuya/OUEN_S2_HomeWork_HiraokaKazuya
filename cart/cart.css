@@ -240,3 +240,10 @@ main {
     #confirmInputContents:disabled {
       background-color: #deb08999;
     }
+
+    /* エラーメッセージレイアウト */
+    .error_message {
+      padding-top: 5px;
+      font-size: 10px;
+      color: #ff8d8d;
+    }

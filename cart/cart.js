@@ -28,7 +28,6 @@ for (let item of cartInfo) {
   `
   document.querySelector('#itemContents').appendChild(listItem)
 }
-console.log(pliceList)
 
 
 // item情報削除
@@ -106,11 +105,57 @@ console.log(pliceList)
 function infoCheck() {
   // buttonActivation関数の"customerInformation"を取得
   const customerObj = buttonActivation().customerInformation
-  // 「お客様情報」をローカルストレージ"customer"に保存
-  setCustomer(customerObj)
+  // お客様あ情報の入力内容が適正か判別
+  const emailPattern = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/
+  const emailJudgement = emailPattern.test(customerObj.inputEmail)
+  console.log(emailJudgement, 'inputEmail')
 
-  // confirmationページに'cart'情報と'customerInfo'を紐付けてページ遷移
-  location.href = `http://127.0.0.1:5500/confirmation/confirmation.html?`
+  const postalCodePattern = /^\d{7}$/
+  const postCodeJudgement = postalCodePattern.test(customerObj.postCode)
+  console.log(postCodeJudgement, 'postCode')
+
+  // 削除したい.error_message要素を取得
+  const emailErrorDiv = document.querySelector('#errorEmail')
+  // 親要素を取得し、対象の要素を削除
+  if (emailErrorDiv && emailErrorDiv.parentNode) {
+    emailErrorDiv.parentNode.removeChild(emailErrorDiv)
+  }
+  // 削除したい.error_message要素を取得
+  const postalCodeErrorDiv = document.querySelector('#errorPostalCode');
+  // 親要素を取得し、対象の要素を削除
+  if (postalCodeErrorDiv && postalCodeErrorDiv.parentNode) {
+    postalCodeErrorDiv.parentNode.removeChild(postalCodeErrorDiv)
+  }
+
+  const emailError = document.createElement('div')
+  emailError.innerHTML = `
+    <div class="error_message" id="errorEmail">正しいメールアドレスを入力してください。</div>
+  `
+  const postalCodeError = document.createElement(`div`)
+  postalCodeError.innerHTML = `
+    <div class="error_message" id="errorPostalCode">もう一度郵便番号を確認してください。</div>
+  `
+
+
+  if (!emailJudgement && !postCodeJudgement) {
+
+    document.querySelector('.email-container').appendChild(emailError)
+    document.querySelector('.entireAddressField-container').appendChild(postalCodeError)
+  
+  } else if (!emailJudgement && postCodeJudgement) {
+    document.querySelector('.email-container').appendChild(emailError)
+
+  } else if (emailJudgement && !postCodeJudgement) {
+    document.querySelector('.entireAddressField-container').appendChild(postalCodeError)
+
+  } else if (emailJudgement && postCodeJudgement) {
+    console.log('両方正しい')
+    // 「お客様情報」をローカルストレージ"customer"に保存
+    setCustomer(customerObj)
+
+    // confirmationページに'cart'情報と'customerInfo'を紐付けてページ遷移
+    location.href = `http://127.0.0.1:5500/confirmation/confirmation.html?`
+  }
 }
 
 document.querySelector('#confirmInputContents')
